@@ -1,0 +1,6 @@
+---
+name: example_project
+modules:
+- name: puppetlabs-apache
+- name: puppetlabs-stdlib
+- name: puppetlabs-concat
