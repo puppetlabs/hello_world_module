@@ -100,13 +100,6 @@ namespace :spec do
   task :all     => targets
   task :default => :all
 
-  task(:localhost).clear
-  task :localhost do 
-    RSpec::Core::RakeTask.new(:localhost) do |t|
-      t.pattern = "spec/localhost/**/*_spec.rb"
-    end
-  end
-
   targets.each do |target|
     original_target = target == "_default" ? target[1..-1] : target
     desc "Run serverspec tests to #{original_target}"
