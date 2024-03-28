@@ -1,0 +1,11 @@
+# inventory.yaml
+groups:
+  - name: test_servers
+    targets:
+    - IP_ADDRESS_GOES_HERE
+config:
+  ssh:
+    native-ssh: true
+    host-key-check: false
+    user: instruqt
+    private-key: /home/code/.ssh/id_ed25519
