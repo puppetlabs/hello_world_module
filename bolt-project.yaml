@@ -1,5 +1,5 @@
 ---
-name: example_project
+name: teched_hello_world
 modules:
 - name: puppetlabs-apache
 - name: puppetlabs-stdlib
