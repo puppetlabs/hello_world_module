@@ -2,7 +2,7 @@
 groups:
   - name: test_servers
     targets:
-    - IP_ADDRESS_GOES_HERE
+    - testserver
 config:
   ssh:
     native-ssh: true
