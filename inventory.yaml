@@ -8,4 +8,4 @@ config:
     native-ssh: true
     host-key-check: false
     user: root
-    private-key: /home/code/.ssh/root_key
+    private-key: /home/code/.ssh/root_user_key
