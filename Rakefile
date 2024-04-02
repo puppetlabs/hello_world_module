@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Copyright 2024. Puppet, Inc., a Perforce company. 
+# Copyright 2024. Puppet, Inc., a Perforce company.
 
 require 'bundler'
 require 'puppet_litmus/rake_tasks' if Gem.loaded_specs.key? 'puppet_litmus'
@@ -43,7 +43,6 @@ def changelog_future_release
 end
 
 PuppetLint.configuration.send('disable_relative')
-
 
 if Gem.loaded_specs.key? 'github_changelog_generator'
   GitHubChangelogGenerator::RakeTask.new :changelog do |config|
@@ -95,6 +94,13 @@ namespace :spec do
     target = File.basename(dir)
     target = "_#{target}" if target == "default"
     targets << target
+  end
+
+  task(:localhost).clear
+  task :localhost do
+    RSpec::Core::RakeTask.new(:localhost) do |t|
+      t.pattern = "spec/localhost/**/*_spec.rb"
+    end
   end
 
   task :all     => targets
