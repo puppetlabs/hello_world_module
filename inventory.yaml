@@ -7,5 +7,5 @@ config:
   ssh:
     native-ssh: true
     host-key-check: false
-    user: instruqt
-    private-key: /home/code/.ssh/id_ed25519
+    user: root
+    private-key: /home/code/.ssh/root_key
